@@ -1,8 +1,9 @@
 import React from 'react';
-import { useCart } from "../context/CartContext"; // ✅ Correct Import
+import { useCart } from "../context/CartContext";
+import '../App.css'; // Corrected Import Path
 
 const Checkout = () => {
-  const { cart } = useCart(); // ✅ Access cart from context
+  const { cart } = useCart();
 
   const handleCheckout = () => {
     // Implement payment and order placement logic
@@ -24,7 +25,7 @@ const Checkout = () => {
               </li>
             ))}
           </ul>
-          <button onClick={handleCheckout}>Place Order</button>
+          <button onClick={handleCheckout} className="checkout-button">Place Order</button>
         </div>
       )}
     </div>
